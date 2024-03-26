@@ -4,10 +4,11 @@ import 'package:flutter_clean_arch/core/usecases/usecase.dart';
 import 'package:flutter_clean_arch/features/number-trivia/domain/entities/number_trivia_entity.dart';
 import 'package:flutter_clean_arch/features/number-trivia/domain/repository/number_trivia_repository.dart';
 
-class GetRandomNumberTrivia extends UseCase<NumberTriviaEntity, NoParams> {
+class GetRandomNumberTriviaUsecase
+    extends UseCase<NumberTriviaEntity, NoParams> {
   final NumberTriviaRepository repository;
 
-  GetRandomNumberTrivia(this.repository);
+  GetRandomNumberTriviaUsecase(this.repository);
 
   @override
   Future<Either<Failure, NumberTriviaEntity>> call(NoParams params) async {
